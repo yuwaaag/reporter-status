@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Reporter Status</title>
-</head>
-<body>
-
 <script>
 const params = new URLSearchParams(window.location.search);
 const reporter = params.get("reporter");
@@ -12,10 +5,9 @@ const reporter = params.get("reporter");
 if (reporter) {
   setInterval(() => {
     new Image().src =
-      "https://script.google.com/macros/s/AKfycbw1XHN_sXTHfr-D6UcHRN8ZIoV9IWTERc4JsFqpWxURzvOPAc8ZcbEUG8ISTtNT5eeUng/exec" + reporter + "&t=" + Date.now();
+      "https://script.google.com/macros/s/AKfycbw1XHN_sXTHfr-D6UcHRN8ZIoV9IWTERc4JsFqpWxURzvOPAc8ZcbEUG8ISTtNT5eeUng/exec?reporter=" 
+      + reporter + 
+      "&t=" + Date.now();
   }, 10000);
 }
 </script>
-
-</body>
-</html>
